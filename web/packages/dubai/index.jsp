@@ -1,0 +1,659 @@
+<%-- 
+    Document   : index
+    Created on : 16 May, 2020, 4:07:13 PM
+    Author     : Rishi
+--%>
+
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>
+	Domestic Tour Packages | International Tour Packages | Weekend Tour Packages | Honeymoon Tour Packages
+</title>
+    </head>
+    <body>
+        <jsp:include page="/header.jsp" ></jsp:include> 
+<script>
+
+    $(document).ready(function () {
+        //jquery
+        $(location).attr('href');
+
+        //pure javascript
+        var pathname = window.location.pathname;
+
+        // to show it in an alert window
+        //alert(pathname);
+
+
+        if (document.location.pathname.indexOf("../../default/index.html") == 0) {
+            //Code goes here
+            activeHome();
+        }
+        else if (document.location.pathname.indexOf("../../domestic-destinations/index.html") == 0) {
+            activeDomestic();
+        }
+        else if (document.location.pathname.indexOf("../../international-destinations/index.html") == 0) {
+            activeInternational();
+        }
+        else if (document.location.pathname.indexOf("../../couple-tour-domestic-packages/index.html") == 0) {
+            activeCoupleTour();
+        }
+        else if (document.location.pathname.indexOf("../../couple-tour-international-packages/index.html") == 0) {
+            activeCoupleTour();
+        }
+        else if (document.location.pathname.indexOf("../../family-tour-domestic-packages/index.html") == 0) {
+            activeFamilyTour();
+        }
+        else if (document.location.pathname.indexOf("../../family-tour-international-packages/index.html") == 0) {
+            activeFamilyTour();
+        }
+        else if (document.location.pathname.indexOf("../../videos/index.html") == 0) {
+            activeVideo();
+        }
+        else if (document.location.pathname.indexOf("../../video/index.html") == 0) {
+            activeVideo();
+        }
+        else if (document.location.pathname.indexOf("../../about-us/index.html") == 0) {
+            activeAbout();
+        }
+        else if (document.location.pathname.indexOf("../../services/index.html") == 0) {
+            activeServices();
+        }
+        else if (document.location.pathname.indexOf("../../contact-us/index.html") == 0) {
+            activeContact();
+        }
+        else if (document.location.pathname.indexOf("../../inquiry/index.html") == 0) {
+            activeInquiry();
+        }
+
+    });
+
+    function activeHome() {
+        $("#liHome").addClass("active");
+        $("#liDomesticPackages").removeClass("active");
+        $("#liInternationalPackages").removeClass("active");
+        $("#liCoupleTour").removeClass("active");
+        $("#liFamilyTour").removeClass("active");
+        $("#liVideos").removeClass("active");
+        $("#liAbout").removeClass("active");
+
+        $("#liContact").removeClass("active");
+        $("#liInquiry").removeClass("active");
+    }
+
+    function activeDomestic() {
+        $("#liHome").removeClass("active");
+        $("#liDomesticPackages").addClass("active");
+        $("#liInternationalPackages").removeClass("active");
+        $("#liCoupleTour").removeClass("active");
+        $("#liFamilyTour").removeClass("active");
+        $("#liVideos").removeClass("active");
+        $("#liAbout").removeClass("active");
+
+        $("#liContact").removeClass("active");
+        $("#liInquiry").removeClass("active");
+    }
+
+    function activeInternational() {
+        $("#liHome").removeClass("active");
+        $("#liDomesticPackages").removeClass("active");
+        $("#liInternationalPackages").addClass("active");
+        $("#liCoupleTour").removeClass("active");
+        $("#liFamilyTour").removeClass("active");
+        $("#liVideos").removeClass("active");
+        $("#liAbout").removeClass("active");
+
+        $("#liContact").removeClass("active");
+        $("#liInquiry").removeClass("active");
+    }
+
+    function activeCoupleTour() {
+        $("#liHome").removeClass("active");
+        $("#liDomesticPackages").removeClass("active");
+        $("#liInternationalPackages").removeClass("active");
+        $("#liCoupleTour").addClass("active");
+        $("#liFamilyTour").removeClass("active");
+        $("#liVideos").removeClass("active");
+        $("#liAbout").removeClass("active");
+
+        $("#liContact").removeClass("active");
+        $("#liInquiry").removeClass("active");
+    }
+
+    function activeFamilyTour() {
+        $("#liHome").removeClass("active");
+        $("#liDomesticPackages").removeClass("active");
+        $("#liInternationalPackages").removeClass("active");
+        $("#liCoupleTour").removeClass("active");
+        $("#liFamilyTour").addClass("active");
+        $("#liVideos").removeClass("active");
+        $("#liAbout").removeClass("active");
+
+        $("#liContact").removeClass("active");
+        $("#liInquiry").removeClass("active");
+    }
+
+    function activeVideo() {
+        $("#liHome").removeClass("active");
+        $("#liDomesticPackages").removeClass("active");
+        $("#liInternationalPackages").removeClass("active");
+        $("#liCoupleTour").removeClass("active");
+        $("#liFamilyTour").removeClass("active");
+        $("#liVideos").addClass("active");
+        $("#liAbout").removeClass("active");
+
+        $("#liContact").removeClass("active");
+        $("#liInquiry").removeClass("active");
+    }
+
+    function activeAbout() {
+        $("#liHome").removeClass("active");
+        $("#liDomesticPackages").removeClass("active");
+        $("#liInternationalPackages").removeClass("active");
+        $("#liCoupleTour").removeClass("active");
+        $("#liFamilyTour").removeClass("active");
+        $("#liVideos").removeClass("active");
+        $("#liAbout").addClass("active");
+
+        $("#liContact").removeClass("active");
+        $("#liInquiry").removeClass("active");
+    }
+
+    function activeServices() {
+        $("#liHome").removeClass("active");
+        $("#liDomesticPackages").removeClass("active");
+        $("#liInternationalPackages").removeClass("active");
+        $("#liCoupleTour").removeClass("active");
+        $("#liFamilyTour").removeClass("active");
+        $("#liVideos").removeClass("active");
+        $("#liAbout").removeClass("active");
+
+        $("#liContact").removeClass("active");
+        $("#liInquiry").removeClass("active");
+    }
+
+    function activeContact() {
+        $("#liHome").removeClass("active");
+        $("#liDomesticPackages").removeClass("active");
+        $("#liInternationalPackages").removeClass("active");
+        $("#liCoupleTour").removeClass("active");
+        $("#liFamilyTour").removeClass("active");
+        $("#liVideos").removeClass("active");
+        $("#liAbout").removeClass("active");
+
+        $("#liContact").addClass("active");
+        $("#liInquiry").removeClass("active");
+    }
+
+    function activeInquiry() {
+        $("#liHome").removeClass("active");
+        $("#liDomesticPackages").removeClass("active");
+        $("#liInternationalPackages").removeClass("active");
+        $("#liCoupleTour").removeClass("active");
+        $("#liFamilyTour").removeClass("active");
+        $("#liVideos").removeClass("active");
+        $("#liAbout").removeClass("active");
+
+        $("#liContact").removeClass("active");
+        $("#liInquiry").addClass("active");
+    }
+</script>
+
+    <form method="post" action="https://ajaymodi.com/packages/dubai/?a1=dubai" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTc2NjcxMjUzNA9kFgJmD2QWBAIED2QWBGYPFgIeC18hSXRlbUNvdW50AgkWEmYPZBYCZg8VAgloaW1hY2hhbC8ISEltYWNoYWxkAgEPZBYCZg8VAg1zb3V0aC1pbmRpYS0vDFNvdXRoIEluZGlhIGQCAg9kFgJmDxUCB2tlcmFsYS8GS2VyYWxhZAIDD2QWAmYPFQIIa2FzaG1pci8HS2FzaG1pcmQCBA9kFgJmDxUCH3ZhaXNobm9kZXZpLXBhdG5pdG9wLXNoaXZraG9kaS8eVmFpc2hub2RldmkgUGF0bml0b3AgU2hpdmtob2RpZAIFD2QWAmYPFQILbGVoLWxhZGFraC8KTGVoLUxhZGFraGQCBg9kFgJmDxUCEnNpa2tpbS1kYXJqZWVsaW5nLxFTaWtraW0gRGFyamVlbGluZ2QCBw9kFgJmDxUCCmNoYXItZGhhbS8JQ2hhciBEaGFtZAIID2QWAmYPFQIIZ3VqYXJhdC8HR3VqYXJhdGQCAQ8WAh8AAgkWEmYPZBYCZg8VAgViYWxpLwRCYWxpZAIBD2QWAmYPFQIGZHViYWkvBUR1YmFpZAICD2QWAmYPFQIlc2luZ2Fwb3JlLW1hbGF5c2lhLXRoYWlsYW5kLS0tY3J1aXNlLyRTaW5nYXBvcmUgTWFsYXlzaWEgVGhhaWxhbmQgLSBDcnVpc2VkAgMPZBYCZg8VAhltYWNhdS1zaGVuemhlbi1ob25na29uZy0vGE1hY2F1IFNoZW56aGVuIEhvbmdrb25nIGQCBA9kFgJmDxUCCXRoYWlsYW5kLwhUaGFpbGFuZGQCBQ9kFgJmDxUCB2V1cm9wZS8GRXVyb3BlZAIGD2QWAmYPFQIEdXNhLwNVU0FkAgcPZBYCZg8VAgpzcmktbGFua2EvCVNyaSBMYW5rYWQCCA9kFgJmDxUCE3NpbmdhcG9yZS1tYWxheXNpYS8SU2luZ2Fwb3JlIE1hbGF5c2lhZAIGD2QWBAIDD2QWBGYPFgIfAAIJFhJmD2QWBGYPFQEAZAIBDxUCBGJhbGkEQmFsaWQCAQ9kFgRmDxUBBmFjdGl2ZWQCAQ8VAgVkdWJhaQVEdWJhaWQCAg9kFgRmDxUBAGQCAQ8VAiRzaW5nYXBvcmUtbWFsYXlzaWEtdGhhaWxhbmQtLS1jcnVpc2UkU2luZ2Fwb3JlIE1hbGF5c2lhIFRoYWlsYW5kIC0gQ3J1aXNlZAIDD2QWBGYPFQEAZAIBDxUCGG1hY2F1LXNoZW56aGVuLWhvbmdrb25nLRhNYWNhdSBTaGVuemhlbiBIb25na29uZyBkAgQPZBYEZg8VAQBkAgEPFQIIdGhhaWxhbmQIVGhhaWxhbmRkAgUPZBYEZg8VAQBkAgEPFQIGZXVyb3BlBkV1cm9wZWQCBg9kFgRmDxUBAGQCAQ8VAgN1c2EDVVNBZAIHD2QWBGYPFQEAZAIBDxUCCXNyaS1sYW5rYQlTcmkgTGFua2FkAggPZBYEZg8VAQBkAgEPFQISc2luZ2Fwb3JlLW1hbGF5c2lhElNpbmdhcG9yZSBNYWxheXNpYWQCAg8WAh8AAgEWAmYPZBYEAgQPFQYBMQExATEITWF5LTIwMjABMQExZAIFDxYCHwACAhYEZg9kFgpmDxUBGGRlc3RpbmF0aW9uLWl0ZW0gY2wtYmx1ZWQCAQ8VAhY2MzcxNzU0ODQ0Mjc5ODQzNzYuanBnGER1YmFpIEdyb3VwIFRvdXIoSW5kaWdvKWQCAg8VBBFkdWJhaS1ncm91cC10b3VyLwNJTlIGNDUsOTk5AlBQZAIDDxUEEWR1YmFpLWdyb3VwLXRvdXIvGER1YmFpIEdyb3VwIFRvdXIoSW5kaWdvKQE1ATZkAgQPFQERZHViYWktZ3JvdXAtdG91ci9kAgEPZBYKZg8VARlkZXN0aW5hdGlvbi1pdGVtIGNsLWdyZWVuZAIBDxUCFjYzNzE3NTU4MzI5ODYzNjgxOC5qcGcaRHViYWkgR3JvdXAgVG91ciBGbHkgZHViYWlkAgIPFQQbZHViYWktZ3JvdXAtdG91ci1mbHktZHViYWkvA0lOUgY1MSw5OTkCUFBkAgMPFQQbZHViYWktZ3JvdXAtdG91ci1mbHktZHViYWkvGkR1YmFpIEdyb3VwIFRvdXIgRmx5IGR1YmFpATYBN2QCBA8VARtkdWJhaS1ncm91cC10b3VyLWZseS1kdWJhaS9kAgUPZBYCAgMPZBYCZg9kFgQCAQ8QZGQWAWZkAgMPEA8WBh4NRGF0YVRleHRGaWVsZAUPRGVzdGluYXRpb25OYW1lHg5EYXRhVmFsdWVGaWVsZAUCSUQeC18hRGF0YUJvdW5kZ2QQFRESU2VsZWN0IERlc3RpbmF0aW9uDkRVQkFJLUFCVURIQUJJIlNJTkdBUE9SRS1NQUxBWVNJQS1USEFJTEFORC1DUlVJU0UcQkFOR0tPSyBQQVRUQVlBLVBIVUtFVC1LUkFCSQhTUklMQU5LQQZSVVNTSUEEQkFMSQZFVVJPUEUOSE9OR0tPTkctTUFDQVUGQ0FOQURBBlRVUktFWQhNQUxESVZFUwlNQVVSSVRJVVMMU09VVEggQUZSSUNBEFZJRVROQU0tQ09NQk9ESUEHR1JFRUNFIAZTUEFJTiAVEQEwAjU2AjU3AjU4AjU5AjYwAjYxAjYyAjYzAjY0AjY1AjY2AjY3AjY4AjY5AjcwAjcxFCsDEWdnZ2dnZ2dnZ2dnZ2dnZ2dnZGRkgbKme9Lum0es1DJrnAg9XhMpDm1UV02nNVsFkt1LEA8=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="../../WebResourcefacd.js?d=0m0x9UgsL4FpUwyefHAmvVCmJk4Iky2ZtB9HcfcluaZdfhiYG-boUka1IocixE0yBpph24KgKowvB-dKauERSZ7lSetWSEIQ9fD0w540JoQ1&amp;t=637039397819362791" type="text/javascript"></script>
+
+
+<script src="../../ScriptResourceb4a1.js?d=eELGVrqa_rq4BqhmhXHmLQbpo-hjat67xcKRgV_K7eK1cD7DTWU8SYObjUqYA73b4aiPU4Rt3lK9JBZz80i-LEIn5kPH-_X834mz7UkLOXVsRCojNYqzAAtATeLol6LE_hGWrtH_b2jwpah4Nx_2Xg2&amp;t=ffffffffa5177bee" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="../../ScriptResourceeffe.js?d=Sc3EeximXtxYl6p9-yAHe8jy13LwQXEYfGigAep40VRseAiOJm49z3wKRV_RyplsvPCTu2IS6RN00kzmespVg7U78dUoNbqR2671qdiMAfOTQ1MYyxVgILYBy4FRa97Yg6h_pkHo6oLNvzi8W_hDNQ2&amp;t=ffffffffa5177bee" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C3F7B4E5" />
+</div>
+        <div>
+            <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$script', 'form1', ['tctl00$footer$upPnlFooter','footer_upPnlFooter'], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+            
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-outer text-center package-list-tab">
+        <div class="container">
+            <div class="breadcrumb-content">
+                <h2>Package List</h2>
+                <nav aria-label="breadcrumb">
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Package</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="section-overlay"></div>
+        <div class="tabs-navbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul id="tabs" class="nav nav-tabs">
+
+                            
+                                    <li class=''><a href="../bali/index.html" onclick="funDestinationClick()">Bali</a></li>
+                                
+                                    <li class='active'><a href="index.html" onclick="funDestinationClick()">Dubai</a></li>
+                                
+                                    <li class=''><a href="../singapore-malaysia-thailand---cruise/index.html" onclick="funDestinationClick()">Singapore Malaysia Thailand - Cruise</a></li>
+                                
+                                    <li class=''><a href="../macau-shenzhen-hongkong-/index.html" onclick="funDestinationClick()">Macau Shenzhen Hongkong </a></li>
+                                
+                                    <li class=''><a href="../thailand/index.html" onclick="funDestinationClick()">Thailand</a></li>
+                                
+                                    <li class=''><a href="../europe/index.html" onclick="funDestinationClick()">Europe</a></li>
+                                
+                                    <li class=''><a href="../usa/index.html" onclick="funDestinationClick()">USA</a></li>
+                                
+                                    <li class=''><a href="../sri-lanka/index.html" onclick="funDestinationClick()">Sri Lanka</a></li>
+                                
+                                    <li class=''><a href="../singapore-malaysia/index.html" onclick="funDestinationClick()">Singapore Malaysia</a></li>
+                                
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- BreadCrumb Ends -->
+    <!-- Destinations -->
+    <section class="main-content detail detail-tabs package-list">
+        <div class="container">
+            <div class="main-content-inner">
+                <div class="row">
+                    <div id="content" class="col-md-12 content-desktop-">
+                        <div class="tab-content">
+
+                            
+                            
+                            <div id="" class=" tab-pane fade in active">
+
+                                
+                                <div class="row">
+                                    <div class="clearfix"></div>
+                                    <div class="panel-group tab-title" id="accordion" role="tablist" aria-multiselectable="true">
+                                        
+                                                <input type="hidden" name="ctl00$ContentPlaceHolder1$rptPackageMonthYear$ctl00$hdnTourMonth" id="ContentPlaceHolder1_rptPackageMonthYear_hdnTourMonth_0" value="5" />
+                                                <input type="hidden" name="ctl00$ContentPlaceHolder1$rptPackageMonthYear$ctl00$hdnTourYear" id="ContentPlaceHolder1_rptPackageMonthYear_hdnTourYear_0" value="2020" />
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading" role="tab" id="heading1">
+                                                        <h4 class="panel-title">
+                                                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">May-2020
+                                                            </a>
+                                                        </h4>
+                                                    </div>
+
+
+                                                    <div id="collapse1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading1">
+
+                                                        <div class="panel-body">
+                                                            
+                                                                    <div class="col-md-4 col-xs-6">
+                                                                                                 <div class='destination-item cl-blue'>
+                                                                            <div class="destination-image">
+                                                                                <img src="../../source/uploads/Destination/637175484427984376.jpg" alt="Dubai Group Tour(Indigo)">
+                                                                                <div class="destination-overlay"></div>
+                                                                                <div class="destination-btn">
+                                                                                    <a href="../../package-detail/dubai-group-tour/index.html" class="btn-blue btn-red">View More</a>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="price-overlay">
+                                                                                <h5> <label style="font-size:15px; font-weight:normal; margin-right:5px">Starting From </label><span>INR  45,999  PP</span></h5>
+                                                                            </div>
+                                                                            <div class="destination-content">
+                                                                                <h3><a href="../../package-detail/dubai-group-tour/index.html">Dubai Group Tour(Indigo)</a></h3>
+                                                                                <div class="day-blog">
+                                                                                    <div class="pull-left">
+                                                                                        <p class="dn">
+                                                                                            <span class="over-ic user-ic"><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></span>
+                                                                                            <a href="#">5 Nights / 6 Days</a>
+                                                                                            <span class="over-ic heart-ic"><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></span>
+                                                                                        </p>
+                                                                                    </div>
+                                                                                    <div class="pull-right vm-none">
+                                                                                        <a href="../../package-detail/dubai-group-tour/index.html" class="btn-blue btn-red">View More</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                
+                                                                    <div class="col-md-4 col-xs-6">
+                                                                                                 <div class='destination-item cl-green'>
+                                                                            <div class="destination-image">
+                                                                                <img src="../../source/uploads/Destination/637175583298636818.jpg" alt="Dubai Group Tour Fly dubai">
+                                                                                <div class="destination-overlay"></div>
+                                                                                <div class="destination-btn">
+                                                                                    <a href="../../package-detail/dubai-group-tour-fly-dubai/index.html" class="btn-blue btn-red">View More</a>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="price-overlay">
+                                                                                <h5> <label style="font-size:15px; font-weight:normal; margin-right:5px">Starting From </label><span>INR  51,999  PP</span></h5>
+                                                                            </div>
+                                                                            <div class="destination-content">
+                                                                                <h3><a href="../../package-detail/dubai-group-tour-fly-dubai/index.html">Dubai Group Tour Fly dubai</a></h3>
+                                                                                <div class="day-blog">
+                                                                                    <div class="pull-left">
+                                                                                        <p class="dn">
+                                                                                            <span class="over-ic user-ic"><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></span>
+                                                                                            <a href="#">6 Nights / 7 Days</a>
+                                                                                            <span class="over-ic heart-ic"><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></span>
+                                                                                        </p>
+                                                                                    </div>
+                                                                                    <div class="pull-right vm-none">
+                                                                                        <a href="../../package-detail/dubai-group-tour-fly-dubai/index.html" class="btn-blue btn-red">View More</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                            
+
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/plugin.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/preloader.js"></script>
+
+    <script>
+        function funDestinationClick() {
+
+        }
+
+    </script>
+    <!-- Destination Ends -->
+
+        </div>
+          <div id="loadingDiv" class="loading" style="display: none">
+            <div>
+                <h7>Please wait...</h7>
+            </div>
+        </div>
+        
+
+<!-- Footer -->
+<footer>
+    <div class="footer-upper">
+        <div class="container">
+            <div class="footer-links">
+                <div class="row">
+                    <div class="col-md-4 col-sm-12">
+                        <div class="footer-about footer-margin">
+                            <h3>Contact us / Branch</h3>
+                            <div class="about-location">
+                                <ul>
+                                    <li><i class="fa fa-map-marker" aria-hidden="true"></i>Address</li>
+                                    <li>Shakti -21 Complex, Opp. Sudarshan Bunglow, Nr. European Catalog, Opp, Shivalik Highstreet Building, Keshav Bagh Party Plot to Mansi Circle, Vastrapur Road, Ahmedabad - 380 015</li>
+                                    <li><i class="fa fa-phone-square"></i>Domestic : +91-79 4040 4141</li>
+                                    <li><i class="fa fa-phone-square"></i>Internatinal  : +91-79 4033 0000</li>
+                                    <li><i class="fa fa-envelope"></i>info@ajaymodi.com</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-4">
+                        <div class="footer-links-list footer-margin quik-link">
+                            <h3>Quik Links</h3>
+                            <ul>
+                                <li><a href="../../index.html">Home <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                                <li><a href="../../domestic-destinations/index.html">Domestic <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                                <li><a href="../../international-destinations/index.html">International <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                                <li><a href="../../about-us/index.html">About us <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                                <li><a href="../../contact-us/index.html">Branches <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-4">
+                        <div class="footer-recent-post footer-margin">
+                            <h3>Follow us</h3>
+                            <div class="footer-social-links">
+                                <ul>
+                                    <li class="social-icon"><a href="https://www.facebook.com/pg/AjayModiTravelsPvtLtd/about/?tab=page_info" target="black"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li class="social-icon"><a href="https://twitter.com/AjayModiTravels" target="black"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                    <li class="social-icon"><a href="https://www.instagram.com/ajaymoditravels/" target="black"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-recent-post footer-social-links">
+                            <h3>Get our App</h3>
+                            <div class="footer-social-links">
+                                <ul>
+                                    <li class="social-icon"><a href="https://apps.apple.com/us/app/ajay-modi-travels/id1330616572" target="black">
+                                        <i class="fa fa-apple" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li class="social-icon"><a href="https://play.google.com/store/apps/details?id=com.aseuminfotech.am&amp;hl=en" target="black"><i class="fa fa-android" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-4">
+                        <div class="footer-links-list">
+                            <div class="footer-instagram">
+                                <h3>Member Of</h3>
+                                <ul>
+                                    <li>
+                                        <img src="../../images/insta1.jpg" alt="Image"></li>
+                                    <li>
+                                        <img src="../../images/insta2.jpg" alt="Image"></li>
+                                    <li>
+                                        <img src="../../images/insta3.jpg" alt="Image"></li>
+                                    <li>
+                                        <img src="../../images/insta4.jpg" alt="Image"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="copyright-content">
+                    <p>Copyright © 2019. All rights reserved. Designed & Developed by <a href="http://www.aseuminfotech.com/" target="_blank">ASEUM INFOTECH</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Quick Enquiry to Open -->
+
+<!-- Quick Enquiry to Close -->
+<!-- Footer Ends -->
+<!-- Back to top start -->
+<div id="back-to-top">
+    <a href="#"></a>
+</div>
+<div class="quick_enquiry">
+    <a type="button" class="btn-blue btn-red qu_btn" data-toggle="modal" data-target="#myModal">Quick Enquiry </a>
+    <!-- The Modal -->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <div class="get-by">Quick Enquiry</div>
+                    
+                    <button type="button" class="close" onclick="funCloseInquiry()">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="search-content">
+                        <form>
+                            <div class="row">
+                                <div class="clearfix"></div>
+                                <div class="col-md-12">
+                                    <div class="table_item">
+                                        <div class="form-group">
+                                            <input name="ctl00$footer$txtInquiryName" type="text" id="footer_txtInquiryName" class="form-control" placeholder="Enter Your Name" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="table_item">
+                                        <div class="form-group">
+                                            <input name="ctl00$footer$txtInquiryEmail" type="text" id="footer_txtInquiryEmail" class="form-control" placeholder="Enter Your E-mail" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="table_item">
+                                        <div class="form-group">
+                                            <input name="ctl00$footer$txtInquiryPhone" type="text" id="footer_txtInquiryPhone" class="form-control" placeholder="+91 Enter Your Phone" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="footer_upPnlFooter">
+	
+                                        <div class="col-md-12">
+                                            <div class="table_item">
+                                                <div class="form-group">
+                                                    
+                                                    <select name="ctl00$footer$ddlInquiryDestinationType" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$footer$ddlInquiryDestinationType\&#39;,\&#39;\&#39;)&#39;, 0)" id="footer_ddlInquiryDestinationType">
+		<option selected="selected" value="1">International</option>
+		<option value="2">Domestic</option>
+
+	</select>
+                                                    <ul>
+                                                        <i class="flaticon-maps-and-flags"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="table_item">
+                                                <div class="form-group">
+                                                    
+                                                    <select name="ctl00$footer$ddlDestinationList" id="footer_ddlDestinationList">
+		<option selected="selected" value="0">Select Destination</option>
+		<option value="56">DUBAI-ABUDHABI</option>
+		<option value="57">SINGAPORE-MALAYSIA-THAILAND-CRUISE</option>
+		<option value="58">BANGKOK PATTAYA-PHUKET-KRABI</option>
+		<option value="59">SRILANKA</option>
+		<option value="60">RUSSIA</option>
+		<option value="61">BALI</option>
+		<option value="62">EUROPE</option>
+		<option value="63">HONGKONG-MACAU</option>
+		<option value="64">CANADA</option>
+		<option value="65">TURKEY</option>
+		<option value="66">MALDIVES</option>
+		<option value="67">MAURITIUS</option>
+		<option value="68">SOUTH AFRICA</option>
+		<option value="69">VIETNAM-COMBODIA</option>
+		<option value="70">GREECE </option>
+		<option value="71">SPAIN </option>
+
+	</select>
+                                                    <ul>
+                                                        <i class="flaticon-maps-and-flags"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+</div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <div class="comment-btn">
+                        
+
+                        <a id="footer_lnkSendInquiry" class="btn-blue btn-red sub_btn" href="javascript:__doPostBack(&#39;ctl00$footer$lnkSendInquiry&#39;,&#39;&#39;)">Submit</a>
+                        
+                        <a type="Cancel" class="btn-blue btn-red" id="Cancel" onclick="funCloseInquiry();">Cancel</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript">
+
+    function funCloseInquiry() {
+        $("#myModal").css("display", "none");
+        $("div").removeClass("modal-backdrop fade in");
+    }
+
+    function funOpenInquiry() {
+        //$("#myModal").css("display", "block");
+        $("#myModal").attr("style", "display:block;");
+
+        //$("div").addClass("modal-backdrop fade in");
+
+    }
+
+</script>
+
+    </form>
+
+</body>
+</html>
